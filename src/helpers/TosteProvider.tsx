@@ -1,0 +1,19 @@
+'use client';
+
+import { FunctionComponent, ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
+
+interface ToastProviderProps {
+  children: ReactNode;
+}
+
+const ToastProvider: FunctionComponent<ToastProviderProps> = ({ children }) => {
+  return (
+    <>
+      <Toaster />
+      {children}
+    </>
+  );
+};
+
+export default ToastProvider;
